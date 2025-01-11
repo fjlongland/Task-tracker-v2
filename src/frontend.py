@@ -2,8 +2,8 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
 
 class MainWindow(QMainWindow):
-    def __init__(self, parent = ..., flags = ...):
-        super().__init__(parent, flags)
+    def __init__(self):
+        super().__init__()
         x = 30
         y = 40
         width = 1000
