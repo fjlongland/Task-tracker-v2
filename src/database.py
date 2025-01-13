@@ -81,4 +81,23 @@ def update_date():
     cursor.close()
     conn.close()
 
+def get_dates():
+
+    conn = dbConnect()
+
+    cursor = conn.cursor()
+
+    cursor.execute(f"SELECT date FROM daily_record ORDER BY day_id DESC LIMIT 7")
+
+    dates = cursor.fetchall()
+
+    day = []
+
+    for date in (dates):
+        days = date[0].strftime("%Y-%m-%d")
+        day.append(days)
+
+    #day.pop(0)  
+    return day
+
     
