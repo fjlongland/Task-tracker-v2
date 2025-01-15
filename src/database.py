@@ -74,7 +74,7 @@ def update_date():
 
             nid = did + x
             ndate = date + timedelta(days=x)
-            cursor.execute(f"INSERT INTO daily_record (day_id, date) VALUES (%s, %s)", (nid, ndate))
+            cursor.execute(f"INSERT INTO daily_record (day_id, date, score) VALUES (%s, %s, %s)", (nid, ndate, 0))
 
         conn.commit() 
 

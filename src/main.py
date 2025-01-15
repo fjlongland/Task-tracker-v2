@@ -10,6 +10,10 @@ def main():
     get_dates()
 
     app = QApplication(sys.argv)
+
+    with open("styles.qss", "r") as stylesheet:
+        app.setStyleSheet(stylesheet.read())
+
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
